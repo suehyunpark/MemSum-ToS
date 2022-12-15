@@ -2,3 +2,6 @@ numpy
 tqdm
 rouge_score
 pyrouge
+sentence-transformers
+hk_utils
+
