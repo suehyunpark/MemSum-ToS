@@ -6,7 +6,9 @@ reference model : MemSum
 
 ## ToS;DR dataset
 
+Scrapping ToS;DR dataset from the ToS;DR website.
 
+- ToS;DR website : <https://tosdr.org/>
 
 ## MemSum-LegalEmb
 
