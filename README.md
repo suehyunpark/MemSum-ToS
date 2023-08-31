@@ -14,7 +14,7 @@ Our approach is to improve the Local Sentence Encoder (LSE) module of MemSum by 
 
 ## Dataset
 For validation, we run experiments on [GovReport](https://gov-report-data.github.io/) ([Huang et al., 2021](https://aclanthology.org/2021.naacl-main.112)), the dataset which our baseline reports SOTA on and tests our model's performance on a domain with characteristics similar to ToS.  
-For main evaluation, we collect the ToS;DR dataset from ToS documents and user highlighted text in the [ToS;DR website](https://tosdr.org/).  
+For main evaluation, we build the ToS;DR dataset by scraping ToS documents and user highlighted text in the [tosdr.org](https://tosdr.org/).
 In a single ToS document,
 - Gold summary is composed of sentences highlighted by contributors in the ToS;DR community.
 - Oracle summaries are candidate summaries built by sequentially selecting the optimal sentence that maximally improves the average ROUGE score once added to the current subset of selected sentences. ROUGE scores include ROUGE-1, 2, and L for measuring unigram, bigram, and longest common subsequence.
@@ -23,6 +23,7 @@ In a single ToS document,
 |---------------|--------------|---------------|
 | 1,611 | 202  | 201  |
 
+tosdr.org is licensed under the [GNU Affero General Public License v3.0]((https://github.com/tosdr/edit.tosdr.org/blob/master/LICENSE)) (AGPL-3.0), but currently we are not providing our ToS;DR dataset. To view the dataset format, you can head to our repo's [tosdr-dataset/sample_data](https://github.com/suehyunpark/MemSum-ToS/tree/main/tosdr-dataset/sample_data) directory.
 
 ### Hyperparameters
 We train our model using the Adam optimizer with β1 = 0.9, β2 = 0.999, fixed learning rate 0.0001, weight decay 0.000001, and choose the best checkpoint based on validation performance. For dataset-specific hyperparameters, we select the values optimal after tuning in baseline experiments:
